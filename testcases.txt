@@ -1,0 +1,11 @@
+Michael Russo
+Justin 
+
+Case E
+
+The test creates three nodes in memory, deletes the middle node, then the first and finally the last. This forces the merge of the second malloc with the third when freed. This happens again with the merged malloc with the first. The use of recursion explains the slower times to other test cases. 
+
+
+Case F
+
+The test creates two nodes in memory and frees them in reverse. Recursion is the result of freeing the nodes. It serves as a juxtaposition to Case E as it tracks how long the recursion takes place indide the free call. 
